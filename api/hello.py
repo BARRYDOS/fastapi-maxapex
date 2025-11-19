@@ -29,8 +29,9 @@ async def preflight():
     return JSONResponse(status_code=200)
 
 # Tu endpoint real (PDF, DOCX, JSON, lo que quieras)
-@app.post("/generar-docx")
-@app.get("/generar-docx")  # opcional, para pruebas
+#@app.post("/generar-docx")
+#@app.get("/generar-docx")  # opcional, para pruebas
+@app.api_route("/generar-docx", methods=["GET", "POST"])
 async def generar_docx():
     # Ejemplo: devolver un PDF de prueba
     # Reemplaza esto con tu lógica real (python-docx, Gotenberg, etc.)
